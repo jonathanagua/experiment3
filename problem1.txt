@@ -1,0 +1,45 @@
+#include<iostream>
+#include<conio.h>
+#include<iomanip>
+using namespace std;
+int main()
+{
+	
+	int n=0,total=0, small, large,first=0;
+	double average=0;
+	int a[10];
+	for(int i=0;i<10;i++)
+		a[i]=0;
+	
+	cout<<"Enter 10 integers: "<<endl;
+	for(int n=0; n<10;n++)
+	{
+		cin>> a[n];
+		if (first==0)
+		{
+			first=1;
+			small= a[n];
+			large=a[n];
+		}
+		
+		if(a[n]>large)
+			large=a[n];
+		else if(a[n]<small)
+			small= a[n];
+		total=total+a[n];
+
+		
+			
+	}
+	average=total/10;
+	cout<<"Smallest of the 10 integers: "<<small<<endl;
+	cout<<"Largest of the 10 integers: "<< large<<endl;
+	cout<< "Total of the 10 integers: "<< total<< endl;
+	cout<<"Average of the 10 integers: "<< average;
+
+	
+	
+	
+	getch();
+	return 0;	
+}
